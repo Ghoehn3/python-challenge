@@ -28,7 +28,7 @@ with open(csvpath, encoding="utf8") as csvfile:
         total = total + (int(row[1]))
         months = months + 1
         #finding change by subtracting the last row from the current row
-        if row != header:
+        if months >1:
             change = int(row[1])-last
             change_list.append(change) 
         #finding greatest increase and decrease
